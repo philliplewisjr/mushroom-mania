@@ -1,0 +1,24 @@
+
+
+<div>
+  <div class="inputData">
+    <h2>Mushroom Mania</h2>
+      <input type="text" ng-model="searchText" placeholder="mushroom crop">
+      <input type="radio" name="crop" ng-model="searchType" ng-value="{{mushroom.edible = true}}"> Edible
+      <input type="radio" name="crop" ng-model="searchType" ng-value="mushroom.edible = false"> Not Edible
+  </div>
+  
+  <ul>
+    <li ng-repeat="mushroom in mushroomCrop |filter : searchText | filter : searchType">
+    <div ng-repeat="(key, value) in mushroom">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="mushType"> {{key}}:</div> 
+          <div class="mushInfo">{{value.description}}</div>
+          <div><div class="food">Edible:</div> {{value.edible}}</div>
+        </div>
+      </div>
+      <hr>
+    </li>
+  </ul>
+</div>
