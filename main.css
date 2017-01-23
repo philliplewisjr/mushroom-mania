@@ -1,0 +1,14 @@
+.mushType {
+  font-weight: bolder;
+}
+
+
+.food {
+  font-style: italic;
+  font-weight: bold;
+  display: inline;
+}
+
+.inputData {
+  margin-left: 20px;
+}
